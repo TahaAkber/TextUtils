@@ -1,22 +1,13 @@
 import "./App.css";
-import Home from "./component/Home";
-import Login from "./component/Login";
-import Signup from "./component/Signup";
-import React from "react";
-
-import Aboutus from "./component/Aboutus";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navigationbar from "./components/Navbar";
+import Textform from "./components/Textbar";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/Signup" element={<Signup />}></Route>
-          <Route path="/Login" element={<Login />}></Route>
-          <Route path="/about" element={<Aboutus />}></Route>
-        </Routes>
-      </BrowserRouter>
+      <Navigationbar title="Text-Utils" about="About Us" />
+      <div className="container">
+        <Textform heading="Enter Your Text Below" />
+      </div>
     </div>
   );
 }
