@@ -21,8 +21,8 @@ export default function Textform(props) {
         </label>
         <textarea
           className="form-control"
-          id="exampleFormControlTextarea1"
-          rows="3"
+          id="myBox"
+          rows="8"
           value={text}
           onChange={handleonchange}
         ></textarea>
