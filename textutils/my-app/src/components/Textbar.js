@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 export default function Textform(props) {
-  const [text, settext] = useState("Enter Text You want to convert");
+  const [text, settext] = useState("");
   const handleupclick = () => {
     let newtext = text.toUpperCase();
     settext(newtext);
