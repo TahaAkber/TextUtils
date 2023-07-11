@@ -16,7 +16,7 @@ export default function Textform(props) {
   return (
     <div>
       <div class="mb-3">
-        <label htmlFor="exampleFormControlTextarea1" class="form-label">
+        <label htmlFor="exampleFormControlTextarea1 " class="form-label">
           <h1>{props.heading}</h1>
         </label>
         <textarea
@@ -27,17 +27,21 @@ export default function Textform(props) {
           onChange={handleonchange}
         ></textarea>
       </div>
-      <button className="btn btn-primary" onClick={handleupclick}>
+      <button className="btn btn-primary mx-2" onClick={handleupclick}>
         Convert up to Uppercase
       </button>
-      <button className="btn btn-primary" onClick={handledownclick}>
+      <button className="btn btn-primary mx-2" onClick={handledownclick}>
         Convert up to Lowercase
       </button>
       <div className="container my-3">
-        <h1>Your Text Summary</h1>
+        <h2 className="fw-bold">Your Text Summary</h2>
         <p>
           {text.length} characters and {text.split(" ").length} words
         </p>
+        <h2 className="fw-bold">Minutes Needed to read</h2>
+        <p>{0.008 * text.split(" ").length}</p>
+        <h2 className="fw-bold">Preview</h2>
+        <p>{text}</p>
       </div>
     </div>
   );
