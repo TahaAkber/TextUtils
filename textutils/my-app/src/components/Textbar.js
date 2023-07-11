@@ -13,6 +13,10 @@ export default function Textform(props) {
     let newtext = text.toLowerCase();
     settext(newtext);
   };
+  const handleclear = () => {
+    let newtext = "";
+    settext(newtext);
+  };
   return (
     <div>
       <div class="mb-3">
@@ -32,6 +36,9 @@ export default function Textform(props) {
       </button>
       <button className="btn btn-primary mx-2" onClick={handledownclick}>
         Convert up to Lowercase
+      </button>
+      <button className="btn btn-primary mx-2" onClick={handleclear}>
+        Clear Text
       </button>
       <div className="container my-3">
         <h2 className="fw-bold">Your Text Summary</h2>
