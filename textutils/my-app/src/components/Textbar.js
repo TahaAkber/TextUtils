@@ -33,6 +33,12 @@ export default function Textform(props) {
       <button className="btn btn-primary" onClick={handledownclick}>
         Convert up to Lowercase
       </button>
+      <div className="container my-3">
+        <h1>Your Text Summary</h1>
+        <p>
+          {text.length} characters and {text.split(" ").length} words
+        </p>
+      </div>
     </div>
   );
 }
