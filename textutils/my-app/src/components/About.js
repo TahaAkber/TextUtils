@@ -12,6 +12,7 @@ function About() {
       setmystyle({
         color: "black",
         background: "white",
+        border: "1px solid white",
       });
       setbuttontext("Enable Dark mode");
     } else {
