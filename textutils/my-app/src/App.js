@@ -7,8 +7,8 @@ function App() {
     <div className="App">
       <Navigationbar title="Text-Utils" about="About Us" />
       <div className="container">
-        {/* <Textform heading="Enter Your Text Below" /> */}
-        <About />
+        <Textform heading="Enter Your Text Below" />
+        {/* <About /> */}
       </div>
     </div>
   );

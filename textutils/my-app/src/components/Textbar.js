@@ -17,6 +17,10 @@ export default function Textform(props) {
     let newtext = "";
     settext(newtext);
   };
+  const removeextraspaces = () => {
+    let newtext = text.split(/[ ]+/);
+    settext(newtext.join(" "));
+  };
   return (
     <div>
       <div class="mb-3">
@@ -39,6 +43,9 @@ export default function Textform(props) {
       </button>
       <button className="btn btn-primary mx-2" onClick={handleclear}>
         Clear Text
+      </button>
+      <button className="btn btn-primary mx-2" onClick={removeextraspaces}>
+        Remove Extra Space
       </button>
       <div className="container my-3">
         <h2 className="fw-bold">Your Text Summary</h2>
