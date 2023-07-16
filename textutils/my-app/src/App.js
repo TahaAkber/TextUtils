@@ -18,6 +18,7 @@ function App() {
           <Route path="/about" element={<About />}></Route>
         </Routes>
       </BrowserRouter>
+        <Textform heading="Enter Your Text Below" />
     </>
   );
 }
