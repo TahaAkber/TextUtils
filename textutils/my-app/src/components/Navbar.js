@@ -1,11 +1,15 @@
+import Alert from "./Alert";
+import About from "./About";
+import Textform from "./Textbar";
+import { Link } from "react-router-dom";
 function Navigationbar(props) {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="./">
+          <Link className="navbar-brand" to="./">
             {props.title}
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -20,14 +24,14 @@ function Navigationbar(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="./">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="./">
+                <Link className="nav-link" to="/about">
                   {props.about}
-                </a>
+                </Link>
               </li>
             </ul>
             {/* <form className="d-flex" role="search">
@@ -44,6 +48,10 @@ function Navigationbar(props) {
           </div>
         </div>
       </nav>
+      <Alert alert="This is alert" />
+      <div className="container">
+        <Textform heading="Enter Your Text Below" />
+      </div>
     </div>
   );
 }

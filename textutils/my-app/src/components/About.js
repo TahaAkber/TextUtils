@@ -1,24 +1,25 @@
 import { useState } from "react";
 import React from "react";
+import Navigationbar from "./Navbar";
 
 function About() {
   const [mystyle, setmystyle] = useState({
-    color: "white",
-    background: "black",
+    color: "black",
+    background: "white",
   });
   const [buttontext, setbuttontext] = useState("Enable Light mode");
   const togglemode = () => {
-    if (mystyle.color === "white") {
+    if (mystyle.color === "black") {
       setmystyle({
-        color: "black",
-        background: "white",
+        color: "white",
+        background: "black",
         border: "1px solid white",
       });
       setbuttontext("Enable Dark mode");
     } else {
       setmystyle({
-        color: "white",
-        background: "black",
+        color: "black",
+        background: "white",
       });
       setbuttontext("Enable Light mode");
     }
