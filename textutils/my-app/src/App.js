@@ -1,6 +1,7 @@
 import "./App.css";
 import About from "./components/About";
 import Alert from "./components/Alert";
+import Login from "./components/Login";
 import Navigationbar from "./components/Navbar";
 import Textform from "./components/Textbar";
 import {
@@ -16,6 +17,7 @@ function App() {
         <Navigationbar title="Text-Utils" about="About Us" />
         <Routes>
           <Route path="/about" element={<About />}></Route>
+          <Route path="/login" element={<Login />}></Route>
         </Routes>
       </BrowserRouter>
     </>
