@@ -2,8 +2,16 @@ import Alert from "./Alert";
 import About from "./About";
 import Textform from "./Textbar";
 import { Link } from "react-router-dom";
-
+import { auth } from "./firebase";
+import { signOut } from "firebase/auth";
+import Cookies from "universal-cookie";
+const cookies = new Cookies();
 function Navigationbar(props) {
+  const signout = async () => {
+    await signOut(auth);
+    cookies.remove("auth-token");
+    props.setisauth(false);
+  };
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -11,7 +19,6 @@ function Navigationbar(props) {
           <Link className="navbar-brand" to="./">
             {props.title}
           </Link>
-
           <button
             className="navbar-toggler"
             type="button"
@@ -47,6 +54,11 @@ function Navigationbar(props) {
                 Search
               </button>
             </form> */}
+            <div>
+              <button onClick={signout} className="button">
+                Signout
+              </button>
+            </div>
           </div>
         </div>
       </nav>
